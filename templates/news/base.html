@@ -67,10 +67,9 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4">
-                        <div class="b-search">
-                            <input type="text" placeholder="Search">
-                            <button><i class="fa fa-search"></i></button>
-                        </div>
+                        <form method="get" action="{% url 'search_results' %}">
+                            <input type="search" name="q" placeholder="Qidiruv..." class="form-control">
+                        </form>
                     </div>
                 </div>
             </div>
@@ -104,6 +103,14 @@
                             <a href=""><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
+                    <div class="header_top_right">
+                    {% if request.user.is_authenticated %}
+                        <p><a href="{% url 'logout' %}" style="color: green">Logout</a></p>
+                        <p><a href="{% url 'user_profile' %}" style="color: yellow">My profile</a></p>
+                        {% else %}
+                        <p><a href="{% url 'login' %}" style="color: white; margin-left: 20px;">Saytga kirish</a></p>
+                    {% endif %}
+                </div>
                 </nav>
             </div>
         </div>

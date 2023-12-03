@@ -1,7 +1,7 @@
 {% extends 'news/base.html' %}
 {% load static %}
-
-{% block title %} Bosh sahifa {% endblock title %}
+{% load hitcount_tags %}
+{% block title %} Bosh sahifa {% endblock %}
 {% block content %}
         <!-- Top News Start-->
         <div class="top-news">
@@ -75,6 +75,7 @@
                                     <img src="{{ local_new.image.url }}" />
                                     <div class="cn-title">
                                         <a href="{{ local_new.get_absolute_url }}">{{ local_new.title }}</a>
+                                        <p style="color: white;"><i class="fa fa-eye" aria-hidden="true"></i>{% get_hit_count for local_new %}</p>
                                     </div>
                                 </div>
                             </div>
@@ -91,6 +92,7 @@
                                     <img src="{{ global_new.image.url }}" />
                                     <div class="cn-title">
                                         <a href="{{ global_new.get_absolute_url }}">{{ global_new.title }}</a>
+                                        <p style="color: white;"><i class="fa fa-eye" aria-hidden="true"></i>{% get_hit_count for global_new %}</p>
                                     </div>
                                 </div>
                             </div>
@@ -115,6 +117,7 @@
                                     <img src="{{ technology_new.image.url }}" />
                                     <div class="cn-title">
                                         <a href="{{ technology_new.get_absolute_url }}">{{ technology_new.title }}</a>
+                                        <p style="color: white;"><i class="fa fa-eye" aria-hidden="true"></i>{% get_hit_count for technology_new %}</p>
                                     </div>
                                 </div>
                             </div>
@@ -130,6 +133,7 @@
                                     <img src="{{ sport_new.image.url }}" />
                                     <div class="cn-title">
                                         <a href="{{ sport_new.get_absolute_url }}">{{ sport_new.title }}</a>
+                                        <p style="color: white;"><i class="fa fa-eye" aria-hidden="true"></i>{% get_hit_count for sport_new %}</p>
                                     </div>
                                 </div>
                             </div>
