@@ -1,7 +1,9 @@
 {% extends 'news/base.html' %}
 {% load static %}
 {% load hitcount_tags %}
-{% block title %} Bosh sahifa {% endblock %}
+{% block title %}
+{% blocktrans %}Bosh sahifa {% endblocktrans %}
+{% endblock %}
 {% block content %}
         <!-- Top News Start-->
         <div class="top-news">
@@ -67,7 +69,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2>Mahalliy</h2>
+                        <h2>{% blocktrans %}Mahalliy{% endblocktrans %}</h2>
                         <div class="row cn-slider">
                             {% for local_new in local_news %}
                             <div class="col-md-6">
@@ -84,7 +86,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <h2>Xorijiy</h2>
+                        <h2>{% blocktrans %}Xorijiy{% endblocktrans %}</h2>
                         <div class="row cn-slider">
                             {% for global_new in global_news %}
                             <div class="col-md-6">
@@ -109,7 +111,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2>Texnologiya</h2>
+                        <h2>{% blocktrans %}Texnologiya{% endblocktrans %}</h2>
                         <div class="row cn-slider">
                             {% for technology_new in technology_news %}
                             <div class="col-md-6">
@@ -125,7 +127,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <h2>Sport</h2>
+                        <h2>{% blocktrans %}Sport{% endblocktrans %}</h2>
                         <div class="row cn-slider">
                             {% for sport_new in sport_news %}
                             <div class="col-md-6">
